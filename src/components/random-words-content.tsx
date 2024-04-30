@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import useSwr from "swr";
 
 const WordComponent = ({ word }: { word: string }) => {
-	return <p className="p-4 m-2 rounded-xl bg-blue-200">{word}</p>;
+	return <Link className="p-4 m-2 rounded-xl bg-blue-200" to={`/definition/${word}`}>{word}</Link>;
 };
 
 const RandomWordsContent = () => {

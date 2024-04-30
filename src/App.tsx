@@ -1,13 +1,32 @@
+import Header from "./components/header";
+import HomeContent from "./components/home-content";
+import AboutContent from "./components/about-content";
+import {
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes
+} from "react-router-dom";
+
+const Root = () => {
+  return (
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomeContent />} />
+        <Route path="/about" element={<AboutContent />} />
+      </Routes>
+    </div>
+  )
+}
+
+const router = createBrowserRouter(
+  [{path:"*", Component: Root}]
+)
+
 const App = () => {
   return (
-    <>
-      <div className="flex flex-col items-center">
-        <h1 className="text-6xl p-4 m-2">Introduction to React</h1>
-        <p className="text-xl p-2 m-1">
-          We will be exploring React during the next few discussion sections. I hope you&apos;re ready!
-        </p>
-      </div>
-    </>
+    <RouterProvider router={router} />
   )
 }
 

@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { ArtworksProps } from "../types";
 import ArtworkPreview from "./ArtworkPreview";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export default function ArtworksListContent() {
   const [numArtworks, setNumArtworks] = useState(5);
@@ -18,7 +25,7 @@ export default function ArtworksListContent() {
   }, [numArtworks]);
 
   return (
-    <div>
+    <StyledDiv>
       <h2>Artworks</h2>
       <input
         type="number"
@@ -33,6 +40,6 @@ export default function ArtworksListContent() {
           return <ArtworkPreview artwork={a} />;
         })}
       </div>
-    </div>
+    </StyledDiv>
   );
 }

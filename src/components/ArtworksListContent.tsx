@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ArtworksProps } from "../types";
 import ArtworkPreview from "./ArtworkPreview";
 
-export default function () {
+export default function ArtworksListContent() {
   const [numArtworks, setNumArtworks] = useState(5);
   const [artworks, setArtworks] = useState<ArtworksProps[]>([]);
 

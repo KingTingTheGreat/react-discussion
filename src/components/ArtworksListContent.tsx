@@ -25,21 +25,24 @@ export default function ArtworksListContent() {
   }, [numArtworks]);
 
   return (
-    <StyledDiv>
-      <h2>Artworks</h2>
-      <input
-        type="number"
-        placeholder="Number of Artworks"
-        value={numArtworks}
-        min={1}
-        onChange={(e) => setNumArtworks(Number(e.target.value))}
-      />
-      <p>Number of Artworks: {numArtworks}</p>
-      <div>
-        {artworks.map((a) => {
-          return <ArtworkPreview artwork={a} />;
-        })}
-      </div>
-    </StyledDiv>
+    <>
+      <title>Home</title>
+      <StyledDiv>
+        <h2>Artworks</h2>
+        <input
+          type="number"
+          placeholder="Number of Artworks"
+          value={numArtworks}
+          min={1}
+          onChange={(e) => setNumArtworks(Number(e.target.value))}
+        />
+        <p>Number of Artworks: {numArtworks}</p>
+        <div>
+          {artworks.map((a) => {
+            return <ArtworkPreview artwork={a} />;
+          })}
+        </div>
+      </StyledDiv>
+    </>
   );
 }

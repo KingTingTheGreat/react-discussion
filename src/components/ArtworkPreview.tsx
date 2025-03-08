@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ArtworksProps } from "../types";
+import { Link } from "react-router";
 
 const ArtworkPreviewDiv = styled.div`
   margin: 10px;
@@ -14,9 +15,11 @@ export default function ArtworkPreview({
   artwork: ArtworksProps;
 }) {
   return (
-    <ArtworkPreviewDiv>
-      <h3>{artwork.title}</h3>
-      <p>{artwork.place_of_origin}</p>
-    </ArtworkPreviewDiv>
+    <Link to={`/artwork/${artwork.id}`}>
+      <ArtworkPreviewDiv>
+        <h3>{artwork.title}</h3>
+        <p>{artwork.place_of_origin}</p>
+      </ArtworkPreviewDiv>
+    </Link>
   );
 }

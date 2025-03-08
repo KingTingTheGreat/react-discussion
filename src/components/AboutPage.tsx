@@ -11,9 +11,12 @@ const AboutContentDiv = styled.div`
 
 export default function AboutPage() {
   return (
-    <AboutContentDiv>
-      <h1>I am a CS391 Instructor</h1>
-      <p>This job is so fun!</p>
-    </AboutContentDiv>
+    <>
+      <title>About</title>
+      <AboutContentDiv>
+        <h1>I am a CS391 Instructor</h1>
+        <p>This job is so fun!</p>
+      </AboutContentDiv>
+    </>
   );
 }

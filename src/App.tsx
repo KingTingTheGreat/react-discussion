@@ -8,6 +8,7 @@ import "./App.css";
 import ArtworksListContent from "./components/ArtworksListContent";
 import AboutPage from "./components/AboutPage";
 import Header from "./components/Header";
+import ArtworkContent from "./components/ArtworkContent";
 
 function Root() {
   return (
@@ -16,6 +17,7 @@ function Root() {
       <Routes>
         <Route path="/" element={<ArtworksListContent />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/artwork/:id" element={<ArtworkContent />} />
       </Routes>
     </div>
   );
